@@ -2,22 +2,16 @@
 # ########################################################################### #
 #   shebang: 1                                                                #
 #                                                          :::      ::::::::  #
-#   ft_seed_inventory.py                                 :+:      :+:    :+:  #
+#   ft_plot_area.py                                      :+:      :+:    :+:  #
 #                                                      +:+ +:+         +:+    #
 #   By: tny-onin <tny-onin@student.42antananarivo.   +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
-#   Created: 2026/03/05 17:47:50 by tny-onin            #+#    #+#            #
-#   Updated: 2026/04/18 09:41:20 by tny-onin           ###   ########.fr      #
+#   Created: 2026/03/05 16:14:37 by tny-onin            #+#    #+#            #
+#   Updated: 2026/04/18 09:32:13 by tny-onin           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
-    if unit == "packets":
-        unit += " available"
-    elif unit == "grams":
-        unit += " total"
-    elif unit == "area":
-        unit += " square meters"
-    else:
-        unit = "Unknown unit type"
-    print(seed_type, ": ", quantity, ": ", unit)
+def ft_plot_area() -> None:
+    length = int(input("Enter length : "))
+    width = int(input("Enter width : "))
+    print("Plot area ", (width * length))

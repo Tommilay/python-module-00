@@ -2,22 +2,18 @@
 # ########################################################################### #
 #   shebang: 1                                                                #
 #                                                          :::      ::::::::  #
-#   ft_seed_inventory.py                                 :+:      :+:    :+:  #
+#   ft_water_reminder.py                                 :+:      :+:    :+:  #
 #                                                      +:+ +:+         +:+    #
 #   By: tny-onin <tny-onin@student.42antananarivo.   +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
-#   Created: 2026/03/05 17:47:50 by tny-onin            #+#    #+#            #
-#   Updated: 2026/04/18 09:41:20 by tny-onin           ###   ########.fr      #
+#   Created: 2026/03/05 16:30:47 by tny-onin            #+#    #+#            #
+#   Updated: 2026/04/18 09:33:14 by tny-onin           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
-    if unit == "packets":
-        unit += " available"
-    elif unit == "grams":
-        unit += " total"
-    elif unit == "area":
-        unit += " square meters"
+def ft_water_reminder() -> None:
+    days = int(input("Days since last watering : "))
+    if days > 2:
+        print("Water the plants!")
     else:
-        unit = "Unknown unit type"
-    print(seed_type, ": ", quantity, ": ", unit)
+        print("Plants are fine")

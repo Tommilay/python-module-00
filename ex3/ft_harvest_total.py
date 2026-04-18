@@ -2,22 +2,17 @@
 # ########################################################################### #
 #   shebang: 1                                                                #
 #                                                          :::      ::::::::  #
-#   ft_seed_inventory.py                                 :+:      :+:    :+:  #
+#   ft_harvest_total.py                                  :+:      :+:    :+:  #
 #                                                      +:+ +:+         +:+    #
 #   By: tny-onin <tny-onin@student.42antananarivo.   +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
-#   Created: 2026/03/05 17:47:50 by tny-onin            #+#    #+#            #
-#   Updated: 2026/04/18 09:41:20 by tny-onin           ###   ########.fr      #
+#   Created: 2026/03/05 16:21:41 by tny-onin            #+#    #+#            #
+#   Updated: 2026/04/18 09:32:24 by tny-onin           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
-    if unit == "packets":
-        unit += " available"
-    elif unit == "grams":
-        unit += " total"
-    elif unit == "area":
-        unit += " square meters"
-    else:
-        unit = "Unknown unit type"
-    print(seed_type, ": ", quantity, ": ", unit)
+def ft_harvest_total() -> None:
+    day1 = int(input("Day 1 harvest : "))
+    day2 = int(input("Day 2 harvest : "))
+    day3 = int(input("Day 3 harvest : "))
+    print("Total harvest : ", day1 + day2 + day3)

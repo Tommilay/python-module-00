@@ -2,22 +2,18 @@
 # ########################################################################### #
 #   shebang: 1                                                                #
 #                                                          :::      ::::::::  #
-#   ft_seed_inventory.py                                 :+:      :+:    :+:  #
+#   ft_plant_age.py                                      :+:      :+:    :+:  #
 #                                                      +:+ +:+         +:+    #
 #   By: tny-onin <tny-onin@student.42antananarivo.   +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
-#   Created: 2026/03/05 17:47:50 by tny-onin            #+#    #+#            #
-#   Updated: 2026/04/18 09:41:20 by tny-onin           ###   ########.fr      #
+#   Created: 2026/03/05 16:26:32 by tny-onin            #+#    #+#            #
+#   Updated: 2026/04/18 09:32:58 by tny-onin           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
-    if unit == "packets":
-        unit += " available"
-    elif unit == "grams":
-        unit += " total"
-    elif unit == "area":
-        unit += " square meters"
+def ft_plant_age() -> None:
+    age = int(input("Enter plant age in days : "))
+    if age > 60:
+        print("plant is ready to harvest!")
     else:
-        unit = "Unknown unit type"
-    print(seed_type, ": ", quantity, ": ", unit)
+        print("plant needs more time to grow.")
